@@ -76,7 +76,7 @@ const initialData: Portfolio = {
   email: 'mehrabboozhmehrani30@gmail.com',
   phone: '09931929016',
   github: 'https://github.com/MehrabBoozhmehrani',
-  instagram: 'https://instagram.com/mehrab_boozhmehrani',
+  instagram: 'https://www.instagram.com/mb_webdesign_',
   telegram: 'https://t.me/MehrabBoozhmehrani',
 
   intro: {
@@ -938,7 +938,7 @@ pre {
     <div className="site" dir={fa ? 'rtl' : 'ltr'}>
       <header className="topbar">
         <a className="brand" href="#home">
-          <span className="brand-mark">M</span>
+          <div className="brand-mark"></div> {/* ← M خالی */}
           <span>{text(data.name, lang)}</span>
         </a>
 
@@ -1310,6 +1310,7 @@ pre {
                 GitHub
               </a>
 
+              {/* اینستاگرام اضافه شده */}
               <a
                 href={data.instagram}
                 target="_blank"
@@ -1319,7 +1320,6 @@ pre {
                 Instagram
               </a>
 
-              {/* لینک تلگرام با آیکون */}
               <a
                 href={data.telegram}
                 target="_blank"
