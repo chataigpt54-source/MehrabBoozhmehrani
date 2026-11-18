@@ -1376,5 +1376,4 @@ function SectionTitle({
   );
 }
 
-https://www.instagram.com/mb_webdesign_?bqrl=ZmlucWNkeXk4YTUy اینو بهش اضافه کن
-و تصویر بجای اون M خالی بالای سایت گذاشته شه
+
