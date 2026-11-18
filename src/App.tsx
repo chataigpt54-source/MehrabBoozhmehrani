@@ -76,7 +76,7 @@ const initialData: Portfolio = {
   email: 'mehrabboozhmehrani30@gmail.com',
   phone: '09931929016',
   github: 'https://github.com/MehrabBoozhmehrani',
-  instagram: 'https://www.instagram.com/mb_webdesign_',
+  instagram: 'https://instagram.com/mehrab_boozhmehrani',
   telegram: 'https://t.me/MehrabBoozhmehrani',
 
   intro: {
@@ -938,7 +938,7 @@ pre {
     <div className="site" dir={fa ? 'rtl' : 'ltr'}>
       <header className="topbar">
         <a className="brand" href="#home">
-          <div className="brand-mark"></div> {/* ← M خالی */}
+          <span className="brand-mark">M</span>
           <span>{text(data.name, lang)}</span>
         </a>
 
@@ -954,7 +954,7 @@ pre {
           {nav.map(n => (
             <a
               key={n.id}
-              href={`#${n.id}`}
+              href=`#${n.id}`}
               onClick={() => setMobileMenu(false)}
             >
               {n.label}
@@ -1028,7 +1028,7 @@ pre {
                 {text(data.location, lang)}
               </span>
 
-              <a href={`mailto:${data.email}`}>
+              <a href=`mailto:${data.email}`}>
                 <Mail size={15} />
                 {data.email}
               </a>
@@ -1291,12 +1291,12 @@ pre {
             </div>
 
             <div className="contact-links">
-              <a href={`mailto:${data.email}`}>
+              <a href=`mailto:${data.email}`}>
                 <Mail />
                 {data.email}
               </a>
 
-              <a href={`tel:${data.phone}`}>
+              <a href=`tel:${data.phone}`}>
                 <Phone />
                 {data.phone}
               </a>
@@ -1310,7 +1310,6 @@ pre {
                 GitHub
               </a>
 
-              {/* اینستاگرام اضافه شده */}
               <a
                 href={data.instagram}
                 target="_blank"
@@ -1320,6 +1319,7 @@ pre {
                 Instagram
               </a>
 
+              {/* لینک تلگرام با آیکون */}
               <a
                 href={data.telegram}
                 target="_blank"
@@ -1375,3 +1375,6 @@ function SectionTitle({
     </div>
   );
 }
+
+https://www.instagram.com/mb_webdesign_?bqrl=ZmlucWNkeXk4YTUy اینو بهش اضافه کن
+و تصویر بجای اون M خالی بالای سایت گذاشته شه
