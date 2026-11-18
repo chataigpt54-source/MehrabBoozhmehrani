@@ -18,6 +18,7 @@ type Portfolio = {
   phone: string;
   github: string;
   instagram: string;
+  instagramWeb: string;
   telegram: string;
   intro: Bilingual;
   about: Bilingual;
@@ -77,6 +78,7 @@ const initialData: Portfolio = {
   phone: '09931929016',
   github: 'https://github.com/MehrabBoozhmehrani',
   instagram: 'https://instagram.com/mehrab_boozhmehrani',
+  instagramWeb: 'https://www.instagram.com/mb_webdesign_',
   telegram: 'https://t.me/MehrabBoozhmehrani',
 
   intro: {
@@ -938,7 +940,7 @@ pre {
     <div className="site" dir={fa ? 'rtl' : 'ltr'}>
       <header className="topbar">
         <a className="brand" href="#home">
-          <span className="brand-mark">M</span>
+          <img className="brand-logo" src="/mb-logo.jpg" alt="MB" />
           <span>{text(data.name, lang)}</span>
         </a>
 
@@ -954,7 +956,7 @@ pre {
           {nav.map(n => (
             <a
               key={n.id}
-              href=`#${n.id}`}
+              href={`#${n.id}`}
               onClick={() => setMobileMenu(false)}
             >
               {n.label}
@@ -1028,7 +1030,7 @@ pre {
                 {text(data.location, lang)}
               </span>
 
-              <a href=`mailto:${data.email}`}>
+              <a href={`mailto:${data.email}`}>
                 <Mail size={15} />
                 {data.email}
               </a>
@@ -1291,12 +1293,12 @@ pre {
             </div>
 
             <div className="contact-links">
-              <a href=`mailto:${data.email}`}>
+              <a href={`mailto:${data.email}`}>
                 <Mail />
                 {data.email}
               </a>
 
-              <a href=`tel:${data.phone}`}>
+              <a href={`tel:${data.phone}`}>
                 <Phone />
                 {data.phone}
               </a>
@@ -1317,6 +1319,15 @@ pre {
               >
                 <Globe2 />
                 Instagram
+              </a>
+
+              <a
+                href={data.instagramWeb}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Globe2 />
+                {fa ? 'اینستاگرام طراحی وب' : 'Instagram · Web Design'}
               </a>
 
               {/* لینک تلگرام با آیکون */}
@@ -1375,5 +1386,3 @@ function SectionTitle({
     </div>
   );
 }
-
-
